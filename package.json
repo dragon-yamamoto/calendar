@@ -1,0 +1,58 @@
+{
+	"name": "webpack",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"build": "webpack --config webpack.config.js",
+		"watch": "webpack -w",
+		"lint": "eslint --ext .js --ignore-path .gitignore .",
+		"test": "jest"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"@babel/core": "^7.7.7",
+		"@babel/preset-env": "^7.7.7",
+		"babel-eslint": "^10.0.3",
+		"babel-loader": "^8.0.6",
+		"core-js": "^3.6.1",
+		"eslint": "^6.8.0",
+		"eslint-config-prettier": "^6.9.0",
+		"eslint-loader": "^3.0.3",
+		"eslint-plugin-prettier": "^3.1.2",
+		"jest": "^25.1.0",
+		"prettier": "^1.19.1",
+		"regenerator-runtime": "^0.13.3",
+		"ts-loader": "^6.2.1",
+		"typescript": "^3.7.5",
+		"webpack": "^4.41.5",
+		"webpack-cli": "^3.3.10"
+	},
+	"eslintconfig": {
+		"env": {
+			"browser": true,
+			"es6": true
+		},
+		"extends": "eslint:recommended",
+		"globals": {
+			"Atomics": "readonly",
+			"SharedArrayBuffer": "readonly"
+		},
+		"parserOptions": {
+			"parser": "babel-eslint",
+			"ecmaVersion": 6
+		},
+		"plugins": [
+			"prettier"
+		]
+	},
+	"prettier": {
+		"trailingComma": "es5",
+		"tabWidth": 4,
+		"usetabs": true,
+		"semi": true,
+		"singleQuote": true
+	}
+}
